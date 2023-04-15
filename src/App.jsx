@@ -1,14 +1,11 @@
-<<<<<<< HEAD
-import Navbar from "./componentes/NavBar/NavBar";
+import React from 'react';
+import NavBar from './componentes/NavBar/NavBar';
+import { Input } from './componentes/Input';
 
-const App = () => {
-  return <Navbar></Navbar>;
-=======
-import { Input } from "./components/Input";
-
-const App = () => {
-  return <Input />;
->>>>>>> 4bc910a0868f74f2a748e199ae36dee13bb3bf2e
-};
+function App() {
+  return (
+    <NavBar />
+  );
+}
 
 export default App;
