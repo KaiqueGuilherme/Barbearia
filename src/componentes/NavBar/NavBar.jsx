@@ -16,6 +16,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import './navbar.css';
+import { Container } from '@mui/material';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -52,7 +53,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('md')]: {
-      width: '20ch',
+      width: '35ch',
     },
   },
 }));
@@ -83,6 +84,7 @@ export default function PrimarySearchAppBar() {
 
   const menuId = 'primary-search-account-menu';
   const renderMenu = (
+    
     <Menu
       anchorEl={anchorEl}
       anchorOrigin={{
@@ -138,7 +140,7 @@ export default function PrimarySearchAppBar() {
             <NotificationsIcon />
           </Badge>
         </IconButton>
-        <p>Notifications</p>
+        <p>Notificações</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -150,14 +152,15 @@ export default function PrimarySearchAppBar() {
         >
           <AccountCircle />
         </IconButton>
-        <p>Profile</p>
+        <p>Perfil</p>
       </MenuItem>
     </Menu>
   );
 
-  return (
+  return (  
     <Box sx={{ flexGrow: 1 }}>
       <AppBar sx={{backgroundColor: '#1b1d21'}}>
+        <Container maxWidth="lg">
         <Toolbar>
           <IconButton
             size="large"
@@ -225,7 +228,8 @@ export default function PrimarySearchAppBar() {
               <MoreIcon />
             </IconButton>
           </Box>
-        </Toolbar>
+        </Toolbar> 
+        </Container>
       </AppBar>
       {renderMobileMenu}
       {renderMenu}

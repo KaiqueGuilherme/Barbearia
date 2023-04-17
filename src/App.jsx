@@ -1,10 +1,20 @@
 import React from 'react';
 import NavBar from './componentes/NavBar/NavBar';
-import { Input } from './componentes/Input';
+import CardItem from './componentes/card/Card';
+import { Box } from '@mui/material';
+import { spacing } from '@mui/system';
+import "./app.css";
+import CardInfo from './componentes/Card_info/Card_Inform';
 
 function App() {
   return (
-    <NavBar />
+    <div>
+      <NavBar />
+      <Box  sx={{ display: 'flex', justifyContent: 'center', m: '8rem'}}>
+        <CardItem />
+        <CardInfo />
+      </Box>
+    </div>
   );
 }
 

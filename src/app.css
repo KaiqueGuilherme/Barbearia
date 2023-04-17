@@ -1,0 +1,12 @@
+.card{
+    margin-top: 150px;
+    display: flex;
+}
+
+.cards{
+    display: flex;
+}
+
+body{
+    background-color: #fff;
+}
